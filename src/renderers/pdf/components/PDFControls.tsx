@@ -38,7 +38,7 @@ const PDFControls: FC<{}> = () => {
         <DownloadButton
           id="pdf-download"
           href={currentDocument?.fileData as string}
-          download={currentDocument?.uri || currentDocument?.fileName}
+          download={currentDocument?.fileName || currentDocument?.uri}
           title={t("downloadButtonLabel")}
         >
           <DownloadPDFIcon color="#000" size="75%" />
